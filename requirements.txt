@@ -1,0 +1,9 @@
+flasgger==0.9.5
+flask_cors==3.0.10
+azure-ai-textanalytics==5.1.0b4
+nltk==3.5
+spacy==3.0.1
+stanfordcorenlp==3.9.1.1
+pandas==1.2.1
+tomark==0.1.4
+python-dotenv==0.15.0
