@@ -181,15 +181,38 @@ class NerTagger:
 
     def predict(self, model_type, paragraph):
         response = {}
+        response["ner"] = list()
         if model_type == "Azure":
             client = self.authenticate_client()
-            response = self.azure_entity_recognition(client, paragraph)
+            result = self.azure_entity_recognition(client, paragraph)
+            result["model"] = model_type
+            response["ner"].append(result)
         if model_type == "Spacy":
-            response = self.spacy_entity_recognition(paragraph)
+            result = self.spacy_entity_recognition(paragraph)
+            result["model"] = model_type
+            response["ner"].append(result)
         if model_type == "NLTK":
-            response = self.nltk_entity_recognition(paragraph)
+            result = self.nltk_entity_recognition(paragraph)
+            result["model"] = model_type
+            response["ner"].append(result)
         if model_type == "Stanford_CoreNLP":
-            response = self.stanford_corenlp_entity_recognition(paragraph)
+            result = self.stanford_corenlp_entity_recognition(paragraph)
+            result["model"] = model_type
+            response["ner"].append(result)
+        if model_type == "All":
+            client = self.authenticate_client()
+            result = self.azure_entity_recognition(client, paragraph)
+            result["model"] = "Azure"
+            response["ner"].append(result)
+            result = self.spacy_entity_recognition(paragraph)
+            result["model"] = "Spacy"
+            response["ner"].append(result)
+            result = self.nltk_entity_recognition(paragraph)
+            result["model"] = "NLTK"
+            response["ner"].append(result)
+            result = self.stanford_corenlp_entity_recognition(paragraph)
+            result["model"] = "Stanford_CoreNLP"
+            response["ner"].append(result)
         return response
 
     def predict_by_models(self, pid):

@@ -21,7 +21,7 @@ template = {
         },
         "version": "0.0.1",
     },
-    "host": "localhost:3000",  # overrides localhost:500
+    "host": "localhost:3001",  # overrides localhost:3001
     "basePath": "/api/v1",  # base bash for blueprint registration
     "schemes": ["http", "https"],
     "operationId": "get nlp result",
@@ -66,7 +66,7 @@ def model_predict():
     - name: type
       in: formData
       type: string
-      enum: ['Azure', 'NLTK', 'Spacy', 'Stanford_CoreNLP']
+      enum: ['Azure', 'NLTK', 'Spacy', 'Stanford_CoreNLP', 'All']
       required: true
     responses:
       401:
@@ -123,7 +123,7 @@ def models_predict():
 
 
 def main():
-    app.run(host="0.0.0.0", port=3000)
+    app.run(host="0.0.0.0", port=3001)
 
 
 if __name__ == "__main__":
