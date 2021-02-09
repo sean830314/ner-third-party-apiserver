@@ -1,6 +1,6 @@
 
 * [Named Entity Recognition 命名實體識別](https://medium.com/%E6%88%91%E5%B0%B1%E5%95%8F%E4%B8%80%E5%8F%A5-%E6%80%8E%E9%BA%BC%E5%AF%AB/named-entity-recognition-%E5%91%BD%E5%90%8D%E5%AF%A6%E9%AB%94%E8%AD%98%E5%88%A5-309e97823a43)
-* [Spacy ner model type](9https://spacy.io/models/en)
+* [Spacy ner model type](https://spacy.io/models/en)
 * [Spacy ner models](https://github.com/explosion/spacy-models)
 * [Spacy ner algos](https://spacy.io/universe/project/video-spacys-ner-model)
 * [Extend Named Entity Recogniser (NER) to label new entities with spaCy](https://towardsdatascience.com/extend-named-entity-recogniser-ner-to-label-new-entities-with-spacy-339ee5979044)
