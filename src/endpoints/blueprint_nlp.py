@@ -1,8 +1,11 @@
-from flask import Blueprint, jsonify, request, abort
+from flask import Blueprint, abort, request
+
 from ner import NerTagger
+
 # define the blueprint
 blueprint_nlp = Blueprint(name="blueprint_nlp", import_name=__name__)
 tagger = NerTagger()
+
 
 @blueprint_nlp.route("/api/v1/predict/model_predict", methods=["POST"])
 def model_predict():

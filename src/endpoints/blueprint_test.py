@@ -1,7 +1,8 @@
-from flask import Blueprint, jsonify, request
+from flask import Blueprint
 
 # define the blueprint
 blueprint_test = Blueprint(name="blueprint_test", import_name=__name__)
+
 
 @blueprint_test.route("ping", methods=["GET"])
 def ping():
