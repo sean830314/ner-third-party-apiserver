@@ -26,5 +26,5 @@ spec = APISpec(
         ),
         dict(name="General API", description="Endpoints related to General API"),
     ],
-    plugins=[FlaskPlugin(), MarshmallowPlugin()],
+    plugins=[FlaskPlugin(), MarshmallowPlugin()]
 )
